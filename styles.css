@@ -1,0 +1,21 @@
+
+.idyll-scroll-text {
+  padding-top: 25vh;
+}
+
+.idyll-step:first-of-type {
+  margin-top: 0;
+}
+.d3-component svg {
+  background: #ddd;
+  max-height: 300px;
+}
+.idyll-scroll {
+  margin-top: 0;
+}
+
+@media all and (max-width: 1000px) {
+  .d3-component svg {
+    max-height: 200px;
+  }
+}

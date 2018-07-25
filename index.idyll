@@ -1,0 +1,79 @@
+[meta title:"Idyll Flourish" description:"Short description of your project" /]
+
+[var name:"step" value:0 /]
+
+[Scroller currentStep:step ]
+
+  [Step]
+
+  # Idyll + Flourish
+  #### Matthew Conlen
+
+  [Idyll](https://idyll-lang.org) is a markup language for creating interactive posts, like this one. It extends Markdown with the ability to embed reactive JavaScript components and specify presentational layouts.
+
+  [Flourish](https://flourish.studio/) is a platform for creating visualizations with a spreadsheet-like interface. They stress that you can get your data into their various templates without coding.
+
+  [/Step]
+
+  [Step]
+  This post is testing out an integration between Idyll and Flourish. I've created a component that
+  enables authors to embed their Flourish visualizations directly in Idyll articles. The visualization you see on the right was taken directly from the Flourish documentation.
+  [/Step]
+
+  [Step]
+  You can use Idyll variables to trigger some updates to the Flourish visualization. In this case, I've linked the scroll state in Idyll to the slide number in Flourish.
+  [/Step]
+
+  [Step]
+  This isn't perfect: I'm still learning about their API to see what exactly can and can't be controlled by
+  an external library like Idyll. And the responsive sizing needs work.
+  [/Step]
+
+  [Step]
+  However, I think this points to a path forward where specialized tools may be combined
+  to create a really nice workflow to go from data to visualization to story to publication,
+  without needing to write custom JavaScript.
+  [/Step]
+
+
+  [Step]
+
+    The Idyll markup for this piece looks like:
+
+    ```
+    [var name:"step" value:0 /]
+
+    [Scroller currentStep:step ]
+      [Step]
+        Step 1 text...
+      [/Step]
+      [Step]
+        Step 2 text...
+      [/Step]
+      ...
+    [/Scroller]
+
+    [Fixed]
+      [Flourish story:"956" slide:step /]
+    [/Fixed]
+    ```
+  [/Step]
+
+  [Step]
+  Useful links:
+    * Idyll markup for this article
+    * Flourish component
+    * [Idyll docs](https://idyll-lang.org/docs)
+    * [Flourish docs](https://flourish.studio/)
+  [/Step]
+
+
+[/Scroller]
+
+
+
+[Fixed]
+
+  [Flourish story:"956" slide:step /]
+
+[/Fixed]
